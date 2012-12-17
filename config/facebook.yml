@@ -1,0 +1,22 @@
+# https certificate validation needs to be setup to work
+# https://gist.github.com/867550
+
+development:
+    app_id: 122358817928035
+    secret_key: 0515df1ee53764232d7a63b48e3e2b97
+# test credentials are identical with development as both is expected to be run from localhost
+# this instance is set to sandbox mode so it can callback to localhost without https
+test:
+    app_id: 122358817928035
+    secret_key: 0515df1ee53764232d7a63b48e3e2b97
+
+integration:
+    app_id: 122358817928035
+    secret_key: 0515df1ee53764232d7a63b48e3e2b97
+
+staging:
+    app_id: 122358817928035
+    secret_key: 0515df1ee53764232d7a63b48e3e2b97
+production:
+    app_id: 122358817928035
+    secret_key: 0515df1ee53764232d7a63b48e3e2b97
