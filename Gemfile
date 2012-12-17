@@ -19,8 +19,13 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'omniauth-facebook'
+
 gem 'jquery-rails'
+
+gem 'omniauth'
+gem 'omniauth-identity'
+gem 'omniauth-facebook'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
