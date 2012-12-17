@@ -1,6 +1,15 @@
-OmniAuth.config.logger = Rails.logger
+FACEBOOK_CONFIG = YAML.load_file(Rails.root.join("config/facebook.yml"))[Rails.env]
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :facebook, 122358817928035, 0515df1ee53764232d7a63b48e3e2b97
-end
+provider :facebook, FACEBOOK_CONFIG['app_id'], FACEBOOK_CONFIG['secret_key'],
+         :scope => 'email,user_birthday,read_stream', :display => 'popup'
+provider :identity,
+         fields: [:email, :name, :user_type],
+         on_failed_registration: lambda { |env|
+          IdentitiesController.action(:new).call(env)
+      }
 
+end
+OmniAuth.config.on_failure = Proc.new { |env|
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}
