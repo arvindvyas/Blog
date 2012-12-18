@@ -1,8 +1,9 @@
 Blog::Application.routes.draw do
+  root to: "sessions#new"
+  
   resources :posts
-  resources :posts
- root to: "sessions#new"
-   match "/auth/failure", to: "sessions#failure"
+
+  match "/auth/failure", to: "sessions#failure"
   match "/signout", to: "sessions#destroy", :as => "signout"
   resources :identities
 #match 'auth/facebook/callback', to: 'sessions#create'
