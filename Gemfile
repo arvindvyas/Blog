@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-identity'
 gem 'omniauth-facebook'
+gem "activeadmin", "~> 0.5.1"
 
 
 # To use ActiveModel has_secure_password
