@@ -2,12 +2,27 @@ Blog::Application.routes.draw do
   root to: "sessions#new"
   
   resources :posts
-
+  resources :identities
   match "/auth/failure", to: "sessions#failure"
   match "/signout", to: "sessions#destroy", :as => "signout"
-  resources :identities
+
 #match 'auth/facebook/callback', to: 'sessions#create'
   match "/auth/:provider/callback" => "sessions#create"
+
+
+
+  match "register" => "identities#new", :as => :register
+  match "/login" => "sessions#new"
+  match "/logout" => "sessions#destroy"
+
+
+
+
+
+
+
+
+
 #match 'auth/failure', to: redirect('/')
 #match 'signout', to: 'sessions#destroy', as: 'signout'
   # The priority is based upon order of creation:
