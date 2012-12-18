@@ -41,3 +41,4 @@ gem 'omniauth-facebook'
 
 # To use debugger
 # gem 'debugger'
+gem "bootstrap-sass"
