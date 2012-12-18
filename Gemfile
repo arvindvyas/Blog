@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-identity'
 gem 'omniauth-facebook'
-gem "radiant", "~> 1.1.0"
+gem "paperclip", "~> 3.3.1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
