@@ -22,6 +22,9 @@ end
 
 gem 'jquery-rails'
 
+
+gem 'rambling-slider-rails'
+
 gem 'omniauth'
 gem 'omniauth-identity'
 gem 'omniauth-facebook'

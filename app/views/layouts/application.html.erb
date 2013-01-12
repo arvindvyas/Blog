@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <title>Blog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -17,6 +18,20 @@
 </div>
 
 <%=  yield%>
+<div id="slider">
+  
+  <a href="#link"><%= image_tag("arvind.JPG")%></a>
+  <%= image_tag ("arv.jpg")%>
+  <%= image_tag ("bootstrap-mdo-sfmoma-02.jpg")%>
+  
+  
+</div>
 
 </body>
+
+<script>
+$(function() {
+  $('#slider').ramblingSlider();
+});
+</script>
 </html>
