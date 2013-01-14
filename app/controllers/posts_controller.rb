@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+ before_filter :project  
   # GET /posts
   # GET /posts.json
   def index

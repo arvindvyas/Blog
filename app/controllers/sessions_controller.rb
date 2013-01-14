@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :current_user
   def new
    
     
