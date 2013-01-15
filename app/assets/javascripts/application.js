@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.rambling.slider
+//= require arvblog.js.coffee
+
