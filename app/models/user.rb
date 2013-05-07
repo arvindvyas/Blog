@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
                   :skype, :chat, :facebook, :linkedin, :twitter, :nationality, :gender, :tagline, :avatar, :password,:employer, :employer_website,
                   :uid, :provider, :password_digest, :credits, :resume_viewing_until, :status_newsletter
  
+ 
   def self.from_omniauth(auth)
     find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_omniauth(auth)
   end

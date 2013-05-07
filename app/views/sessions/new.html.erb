@@ -1,11 +1,11 @@
-
-
 <p>
   <strong>Don't use these services?</strong>
   <%= link_to "Create an account", new_identity_path %> or login below.
 </p>
 
 <%= form_tag "/auth/identity/callback" do %>
+<%= render 'share/error_messages',:identity=>@identity%>
+ 
   <div class="field">
     <%= label_tag :auth_key, "Email" %><br>
     <%= text_field_tag :auth_key %>
