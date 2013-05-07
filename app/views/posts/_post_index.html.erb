@@ -1,0 +1,28 @@
+ <div class="row-fluid">
+   <div class="span2">
+     <%= post.title %>
+   </div>
+   <div class="span2">    
+     <%= post.article %>
+   </div>
+  
+   <div class="span2">    
+     <%= link_to 'Show', post %>
+   </div>
+   
+   <div class="span2">    
+     <%= link_to 'Edit', edit_post_path(post) %>
+   </div>
+   
+
+   <div class="span2">    
+     <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+   </div>
+  </div>
+ 
+
+
+
+
+
+
