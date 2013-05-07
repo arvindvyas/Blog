@@ -1,28 +1,13 @@
 <h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Article</th>
-    <th>Image</th>
-    <th>Comments</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="row-fluid">
+      <div class="span2"><h4>Title</h4></div>
+      <div class="span2"><h4>Article<h4></div>
+    </div>
 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.article %></td>
-    <td><%= post.image %></td>
-    <td><%= post.comments %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <%= render 'post_index',:post=>post%>
+   
 <% end %>
-</table>
 
 <br />
 
